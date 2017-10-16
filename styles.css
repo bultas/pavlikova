@@ -1,9 +1,4 @@
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 .bold {
     font-weight: 700;
 }
@@ -44,11 +39,16 @@ a {
 
 .navigation {}
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 500px) {
         .navigation {
             display: flex;
         }
     }
+
+.navigation a {
+    color: inherit;
+    text-decoration: none;
+}
 
 .navigation__link {
     padding: 0 25px 25px 0;
@@ -58,7 +58,7 @@ a {
     position: relative;
 }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 500px) {
         .navigation__link {
             padding: 0;
             margin: 0 25px 0 0;
