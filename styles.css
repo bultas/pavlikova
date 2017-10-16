@@ -35,8 +35,8 @@
 .headline {
     font-weight: 300;
     color: inherit;
-    font-size: 30px;
-    letter-spacing: 8px;
+    font-size: 32px;
+    letter-spacing: 6px;
     line-height: 45px;
 }
 
@@ -57,7 +57,7 @@
     padding: 0 25px 25px 0;
     font-size: 16px;
     font-weight: 300;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     line-height: 30px;
     position: relative;
 }
