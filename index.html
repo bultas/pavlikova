@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sanitize.css/2.0.0/sanitize.min.css"> -->
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css">
+        <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css"> -->
+        <link rel="stylesheet" href="/photoswipe-white-skin/skin.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700&amp;subset=latin-ext" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles.css">
+
+        <title>Portfolio</title>
+    </head>
+    <body>
+
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+
+                <div class="pswp__ui pswp__ui--hidden">
+
+                    <div class="pswp__top-bar">
+
+                        <div class="pswp__counter"></div>
+
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                        <!-- <button class="pswp__button pswp__button--share" title="Share"></button> -->
+                        <!-- <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> -->
+                        <!-- <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> -->
+
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                              <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h1 class="headline">
+                    Hi, I’m <span class="bold">Lenka Pavlíková</span> </br>
+                    Graphic & Package designer
+                </h1>
+            </div>
+
+            <div class="section">
+                <div class="navigation">
+                    <div class="navigation__link">
+                        <a href='//kycn.cz'>Kycn.cz</a>
+                    </div>
+                    <div class="navigation__link">
+                        <a href='//kycn.cz'>Behance</a>
+                    </div>
+                    <div class="navigation__link">
+                        <a href='//kycn.cz'>Facebook</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section__gallery">
+                <div class="gallery" />
+            </div>
+        </div>
+
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+
+        <script src="justified-layout.min.js"></script>
+        <script src="initPhotoSwipeFromDOM.js"></script>
+        <script src="scripts.js"></script>
+
+        <script>
+
+            var galleryElement = document.querySelector('.gallery');
+
+            var images = [
+                {
+                    src: 'photos/2.jpg',
+                    width: 1200,
+                    height: 795
+                },
+                {
+                    src: 'photos/5.jpg',
+                    width: 1200,
+                    height: 800
+                },
+                {
+                    src: 'photos/3.jpg',
+                    width: 1200,
+                    height: 795
+                },
+                {
+                    src: 'photos/1.jpg',
+                    width: 1200,
+                    height: 795
+                },
+                {
+                    src: 'photos/6.jpg',
+                    width: 931,
+                    height: 489
+                },
+                {
+                    src: 'photos/4.jpg',
+                    width: 1200,
+                    height: 848
+                },
+            ];
+
+
+
+            function initGallery() {
+                prepareGalleryLayout(
+                    images,
+                    getRatios(images),
+                    galleryElement,
+                    getContainerWidth(
+                        galleryElement,
+                        1400
+                    )
+                );
+
+                initPhotoSwipeFromDOM([galleryElement]);
+            }
+
+            window.addEventListener('resize', debounce(
+                initGallery,
+                250
+            ));
+
+            initGallery(galleryElement)
+
+
+        </script>
+
+
+    </body>
+</html>
