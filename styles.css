@@ -1,4 +1,13 @@
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: 700;
+}
+
 .container {
     font-family: 'Source Sans Pro', sans-serif;
     color: #000;
@@ -33,13 +42,7 @@
     line-height: 45px;
 }
 
-.bold {
-    font-weight: 700;
-}
-
-.navigation {
-    /*display: flex;*/
-}
+.navigation {}
 
     @media only screen and (min-width: 768px) {
         .navigation {
@@ -79,11 +82,6 @@
 .navigation__link:hover::after {
     width: 0;
     left: 50px;
-}
-
-.navigation__link a {
-    color: inherit;
-    text-decoration: none;
 }
 
 .gallery {
