@@ -16,7 +16,7 @@
 
         <link rel="stylesheet" href="styles.css">
 
-        <title>Lenka Pavlíková - Graphic & Package designer</title>
+        <title>Lenka Pavlíková - Graphic & Packaging Designer</title>
     </head>
     <body>
 
@@ -73,7 +73,7 @@
             <div class="section">
                 <h1 class="headline">
                     Hi, I’m <span class="bold">Lenka Pavlíková</span> </br>
-                    Graphic & Package designer
+                    Graphic & Packaging Designer
                 </h1>
             </div>
 
@@ -147,9 +147,7 @@
                 },
             ];
 
-
-
-            function initGallery() {
+            function buildLayout() {
                 prepareGalleryLayout(
                     images,
                     getRatios(images),
@@ -159,16 +157,15 @@
                         1400
                     )
                 );
-
-                initPhotoSwipeFromDOM([galleryElement]);
             }
 
             window.addEventListener('resize', debounce(
-                initGallery,
+                buildLayout,
                 250
             ));
 
-            initGallery(galleryElement)
+            buildLayout();
+            initPhotoSwipeFromDOM([galleryElement]);
 
 
         </script>
